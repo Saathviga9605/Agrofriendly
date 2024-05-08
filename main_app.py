@@ -7,9 +7,6 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Declare X globally
-X = None
-
 # Function to train the crop recommendation model
 def train_recommendation_model():
     crop_data = pd.read_csv("Crop_recommendation.csv")
@@ -42,7 +39,6 @@ def get_recommendation(model):
 
 # Function to train the crop yield prediction model
 def train_yield_model():
-    global X  # Declare X as global
     data = pd.read_csv("crop_yield.csv")
     data.dropna(inplace=True)
     X = data[['Crop', 'Area', 'Annual_Rainfall', 'Fertilizer', 'Pesticide']]
@@ -51,11 +47,10 @@ def train_yield_model():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
     model = RandomForestRegressor()
     model.fit(X_train, y_train)
-    return model
+    return model, X
 
 # Function to predict crop yield
-def predict_yield(model):
-    global X  # Access X globally
+def predict_yield(model, X):
     st.title("Crop Yield Prediction")
     data = pd.read_csv("crop_yield.csv")
     crop = st.selectbox("Crop", data['Crop'].unique())
@@ -152,8 +147,8 @@ if __name__ == "__main__":
         get_recommendation(model_recommendation)
 
     elif nav_option == 'Predict Crop Yield':
-        model_yield = train_yield_model()
-        predict_yield(model_yield)
+        model_yield, X_yield = train_yield_model()
+        predict_yield(model_yield, X_yield)
 
     elif nav_option == 'Price Prediction':
         data_price = train_price_model()
