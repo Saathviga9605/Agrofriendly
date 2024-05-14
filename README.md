@@ -23,12 +23,5 @@ AgroFriendly is not just another farming app; it's your digital farming companio
 3. **Check Market Prices:** Get insights into market prices for various crops to make informed selling decisions and optimize your profits.
 
 4. **Stay Ahead of Weather:** Plan your farming activities effectively by accessing accurate weather forecasts tailored to your location.
-
-## Meet the Team
-
-AgroFriendly is a collaborative effort by two passionate individuals dedicated to help the agricultural sector:
-
-- [Saathviga B](https://github.com/Saathviga9605)
-- [Krishitha V](https://github.com/krishitha1908)
-
+5. 
 🌾 Happy Farming with AgroFriendly! 🚀
