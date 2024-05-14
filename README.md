@@ -23,5 +23,5 @@ AgroFriendly is not just another farming app; it's your digital farming companio
 3. **Check Market Prices:** Get insights into market prices for various crops to make informed selling decisions and optimize your profits.
 
 4. **Stay Ahead of Weather:** Plan your farming activities effectively by accessing accurate weather forecasts tailored to your location.
-5. 
+   
 🌾 Happy Farming with AgroFriendly! 🚀
